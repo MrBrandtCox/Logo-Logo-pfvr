@@ -1,4 +1,4 @@
-//Variables to import inquirer, shapes, and fs
+//Variables to import inquirer, shapes, and fs from package.json
 const inquirer = require("inquirer");
 const { Triangle, Circle, Square } = require('./lib/shapes.js');
 const fs = require('fs');
@@ -27,30 +27,30 @@ function writeToFile(filename, data) {
 
     fs.writeFile(filename, data, error => {
         if (error) {
-           return console.log(error)
+           return console.log(error) //error message if fail to generate
         } else {
-            console.log('Generated logo.svg')
+            console.log('Generated your logo.svg!') //Successful generation message.
         }
     });
 };
 
-// Function to initialize the app
+// Function to initialize the app with prompt questions.
 function init() {
    return inquirer.prompt(questions) 
     .then((data) => {
-        console.log(data.ShapeColor)
+        console.log(data.ShapeColor)// 
         let userShape 
-    if ('Triangle' === data.Shape) {
+    if ('Triangle' === data.Shape) { //if statement for geometric shape choices
         userShape = new Triangle
     } else if ('Circle' === data.Shape) {
         userShape = new Circle
     } else {
         userShape = new Square
-    } userShape.setColor(data.ShapeColor)
-    userShape.setTextColor(data.TextColor)
+    } userShape.setColor(data.ShapeColor) // shape color
+    userShape.setTextColor(data.TextColor) // text color
     userShape.setText(data.Text)
     console.log(userShape)
-    return writeToFile('logo.svg', userShape.render());
+    return writeToFile('logo.svg', userShape.render()); // This renders the logo based on input.
    
 });
 };
