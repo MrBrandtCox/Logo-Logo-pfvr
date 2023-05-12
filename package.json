@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/MrBrandtCox/Logo-Logo-pfvr#readme",
   "dependencies": {
+    "inquirer": "7.3.3",
     "jest": "^29.5.0"
   }
 }
