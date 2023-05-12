@@ -1,0 +1,26 @@
+{
+  "name": "logo-logo-pfvr",
+  "version": "1.0.0",
+  "description": "## **`Description`** Using Object-Oriented Programming, this application will create a user, based on their input to prompts, a simple SVG generated logo. </br></br>",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrBrandtCox/Logo-Logo-pfvr.git"
+  },
+  "keywords": [
+    "logo",
+    "pfvr"
+  ],
+  "author": "Brandt Cox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrBrandtCox/Logo-Logo-pfvr/issues"
+  },
+  "homepage": "https://github.com/MrBrandtCox/Logo-Logo-pfvr#readme"
+}
