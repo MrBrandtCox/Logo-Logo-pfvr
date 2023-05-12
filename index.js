@@ -6,20 +6,20 @@ const fs = require('fs');
 // An array of questions for user input
 const questions = [{
     type: 'input',
-    message:'Enter up to three characters',
+    message:'Enter up to three characters for your logo.',
     name:'Text'
 }, {
     type: 'input',
-    message:'Enter a text color, or a hexadecimal number',
+    message:'Enter a color or a hexadecimal number for the text.',
     name:'TextColor'
 }, {
     type: 'list',
-    message:'Choose a shape from the list',
+    message:'Choose a shape from the list below:',
     name:'Shape',
     choices: ['Triangle', 'Circle', 'Square']
 }, {
     type: 'input',
-    message:'Enter a shape color, or a hexadecimal number',
+    message:'Enter a color or a hexadecimal number for the shape.',
     name:'ShapeColor'
 }];
 // Function to create the logo
@@ -33,8 +33,8 @@ function writeToFile(filename, data) {
         }
     });
 };
-// Function to initialize the app
 
+// Function to initialize the app
 function init() {
    return inquirer.prompt(questions) 
     .then((data) => {
